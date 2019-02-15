@@ -1,0 +1,40 @@
+{
+	"name": "XWord Info Converter",
+	"version": "1.0",
+	"description": "Print the Blank XWord",
+    "permissions": ["activeTab", "declarativeContent", "storage"],
+
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+	"content_scripts":
+	[
+		{
+			"all_frames":true,
+			"run_at":"document_end",
+			"matches":["http://*.xwordinfo.com/Crossword*", "https://*.xwordinfo.com/Crossword*"],
+			"js":["jquery-min.js", "./xword_worker.js"],
+			"css":["./xword.css"]
+		}
+	],
+
+	"browser_action":
+	{
+		"default_popup":"./xword.html",
+		"default_icon":
+		{
+			"16":"/images/xword16.png",
+			"32":"/images/xword32.png",
+			"48":"/images/xword48.png",
+			"128":"/images/xword128.png"
+		}
+	},
+
+	"icons":
+	{
+		"16":"/images/xword16.png",
+		"32":"/images/xword32.png",
+		"48":"/images/xword48.png",
+		"128":"/images/xword128.png"
+	},
+
+	"manifest_version": 2
+ }
