@@ -1,2 +1,3 @@
 # xword
-Scrape the NYTimes daily xword off the web.
+Chrome Extenstion to Scrape the NYTimes daily xword off the web.
+
