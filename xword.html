@@ -7,23 +7,30 @@
 				font-size:12px;
 				white-space:nowrap;
 				background-color:white;
+				user-select: none;
+				padding:5px;
 				margin:0px;
 			}
 			.btn-convert-xword
 			{
-				padding:5px;
-				margin:3px;
-				display:block;
-				user-select: none;
+				padding:3px;
+				border:1px solid #ccc;
+				border-radius:.25em;
 			}
 			.btn-convert-xword:hover
 			{
 				background-color:#eee;
 			}
+			.date-input
+			{
+				padding:3px;
+				margin-bottom:3px;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="btn-convert-xword">Go To Today's Puzzle</div>
+		<input id="dateInput" class="date-input" type="date"/><div class="btn-date-picker"/>
+		<div class="btn-convert-xword" datepickertextbox="dateInput">Go To Puzzle</div>
 		<script type="text/javascript" src="./xword.js"></script>
 	</body>
 </html>

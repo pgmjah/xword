@@ -11,8 +11,8 @@
 			"all_frames":true,
 			"run_at":"document_end",
 			"matches":["http://*.xwordinfo.com/Crossword*", "https://*.xwordinfo.com/Crossword*"],
-			"js":["jquery-min.js", "./xword_worker.js"],
-			"css":["./xword.css"]
+			"js":["jquery-min.js", "datepicker.js", "./xword_worker.js"],
+			"css":["datepicker.css", "./xword.css"]
 		}
 	],
 

@@ -18,10 +18,20 @@ chrome.runtime.onInstalled.addListener(function(details)
 	// });
 });
 
+var dateSelect = document.querySelector(".date-input");
+var date = new Date();
+var year = date.getFullYear();
+var month = date.getMonth() + 1;
+month = (month <= 9) ? "0" + month : month;
+var day = date.getDate();
+day = (day <= 9) ? "0" + day : day;
+dateSelect.value = year + "-" + month + "-" + day;
+
 var btn = document.querySelector(".btn-convert-xword");
 btn.addEventListener("click", function(e)
 {
-	var date = new Date();
-	var url = "https://www.xwordinfo.com/Crossword?date=" + (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+	var arDate = dateSelect.value.split("-");
+	var url = "https://www.xwordinfo.com/Crossword?date=" + (arDate[1] + "/" + arDate[2] + "/" + arDate[0]);
 	chrome.tabs.update({"url":url});
 });
+
