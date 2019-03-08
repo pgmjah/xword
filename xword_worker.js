@@ -15,6 +15,7 @@ $("<div class='test-btn btn-convert-xword' title='Convert this puzzle to a blank
 	puzTable.removeClass("PuzSpace").css({flex:"0 0 auto"});
 	puzTable.find("td").css({width:22, height:22});
 	puzTable.find(".num").css("fontSize", "8px");
+	puzTable.find("td[style]").attr("style", "");
 
 	$(".numclue > div").each(function(idx, el)
 	{
