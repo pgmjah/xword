@@ -4,8 +4,8 @@ $("<div class='test-btn btn-convert-xword' title='Convert this puzzle to a blank
 	$(".letter").css("display", "none");
 	$("a").css("display", "none");
 	$(".subst").css("display", "none");
-	$(".bigcircle").css({"backgroundPosition":"center", "backgroundSize":"90%"});
-
+	$(".bigcircle").removeClass("bigcircle");//.css({"backgroundPosition":"center", "backgroundSize":"90%", "backgroundImage":"none"});
+	
 	var puzTable = $(".PuzTable");
 	var clueBox = $(".cluebox").css({margin:"0px 0px 0px 20px", fontSize:"10px"});
 	var body = $("body").css("paddingTop", "10px").html("").append([puzTable, clueBox]);
