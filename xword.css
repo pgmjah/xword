@@ -18,3 +18,23 @@
 {
 	background-color:#e8e8e8;
 }
+
+.PuzTable tr td.bigcircle
+{
+	position:relative;
+	background-image:none;
+}
+
+.jah-circle
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	border:1px solid black;
+	border-radius:50%;
+	opacity:.5;
+}
+
