@@ -5,6 +5,7 @@ $("<div class='test-btn btn-convert-xword' title='Convert this puzzle to a blank
 	$("a").css("display", "none");
 	$(".subst, .subst2, .subst3, .subst4").css("display", "none");//subst classes are showing hints...hide them (went to four just in case...could be more?)
 	$(".bigcircle").append("<div class='jah-circle'>");
+	//$(".bigshade").removeClass("bigshade");
 
 	var puzTable = $(".PuzTable");
 	var clueBox = $(".cluebox").css({margin:"0px 0px 0px 20px", fontSize:"10px"});
