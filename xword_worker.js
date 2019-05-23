@@ -7,22 +7,38 @@ $("<div class='test-btn btn-convert-xword' title='Convert this puzzle to a blank
 	$(".bigcircle").append("<div class='jah-circle'>");
 	//$(".bigshade").removeClass("bigshade");
 
+	//puzzle grid
 	var puzTable = $(".PuzTable");
-	var clueBox = $(".cluebox").css({margin:"0px 0px 0px 20px", fontSize:"10px"});
-	var body = $("body").css("paddingTop", "10px").html("").append([puzTable, clueBox]);
-
-	body.css({display:"flex", background:"none"});
-	clueBox.find(".clues").removeClass(".clues").css({fontSize:"10px"})
 	puzTable.removeClass("PuzSpace").css({flex:"0 0 auto"});
 	puzTable.find("td").css({width:22, height:22});
 	puzTable.find(".num").css("fontSize", "8px");
 	puzTable.find("td[style]").attr("style", "");
 
+	//puzzle info under grid
+	var puzTitle = $("#PuzTitle").text();
+	var puzSubTitle = $("#CPHContent_SubTitle").text();
+	var puzInfo = $("<div class='puz-info'>" + ("Title: " + puzTitle + " (" + puzSubTitle + ")") + "</div>");
+
+	//box to hold grid and info
+	var puzBox = $("<div class='puz-box'>").append([puzTable, puzInfo]);
+
+	//clues
+	var clueBox = $(".cluebox").css({margin:"0px 0px 0px 20px", fontSize:"10px"});
+	clueBox.find(".clues").removeClass(".clues").css({fontSize:"10px"})
 	$(".numclue > div").each(function(idx, el)
 	{
 		var text = el.innerText;
 		text = text.replace(" :", "");
 		el.innerText = text; 
 	});
+
+	//add everything back to body
+	var body = $("body").css("paddingTop", "10px").html("").append([puzBox, clueBox]);
+	body.css({display:"flex", background:"none"});
+
+	//aaaaaaaaaand...print that mother-fucker!
 	window.print()
 });
+
+//# sourceURL=xword_worker.js
+

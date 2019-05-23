@@ -26,7 +26,7 @@ month = (month <= 9) ? "0" + month : month;
 var day = date.getDate();
 day = (day <= 9) ? "0" + day : day;
 dateSelect.value = year + "-" + month + "-" + day;
-
+dateSelect.value = "1945-04-01";
 var btn = document.querySelector(".btn-convert-xword");
 btn.addEventListener("click", function(e)
 {

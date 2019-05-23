@@ -25,6 +25,18 @@
 	background-image:none;
 }
 
+.puz-box
+{
+	flex:0 0 auto;
+	display:flex;
+	flex-direction: column;
+}
+
+.puz-info
+{
+	font-size:10pt;
+}
+
 .jah-circle
 {
 	position:absolute;
