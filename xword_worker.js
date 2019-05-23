@@ -17,7 +17,8 @@ $("<div class='test-btn btn-convert-xword' title='Convert this puzzle to a blank
 	//puzzle info under grid
 	var puzTitle = $("#PuzTitle").text();
 	var puzSubTitle = $("#CPHContent_SubTitle").text();
-	var puzInfo = $("<div class='puz-info'>" + ("Title: " + puzTitle + " (" + puzSubTitle + ")") + "</div>");
+	var puzInfo = puzTitle + (puzSubTitle ? (", " + puzSubTitle) : "");
+	var puzInfo = $("<div class='puz-info'>" + puzInfo + "</div>");
 
 	//box to hold grid and info
 	var puzBox = $("<div class='puz-box'>").append([puzTable, puzInfo]);

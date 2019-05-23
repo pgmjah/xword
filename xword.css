@@ -7,6 +7,7 @@
 	top:0px;
 	margin:10px;
 	padding:10px;
+	z-index:10000;
 	font-size:2em;
 	border:2px solid black;
 	border-radius:.2em;
@@ -34,7 +35,7 @@
 
 .puz-info
 {
-	font-size:10pt;
+	font-size:7pt;
 }
 
 .jah-circle
